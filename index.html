@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivam Madaan - Profile</title>
+    <link rel="icon" type="image/png" href="assets/badge.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <!-- Importing Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Correctly linking the external CSS file -->
+    <link rel="stylesheet" href="style.css"> 
+</head>
+
+<body class="min-h-screen flex flex-col items-center justify-center p-4 md:p-8 relative">
+
+    <!-- Subtle animated background gradient element -->
+    <div class="absolute inset-0 z-[-1] opacity-30" style="background: radial-gradient(circle at 50% 50%, #1a1a2e 0%, #000000 100%);"></div>
+
+    <!-- Site Header / Navigation -->
+    <header class="fixed top-0 left-0 w-full py-4 px-6 md:px-12 flex justify-between items-center z-[100] bg-black/70 backdrop-blur-md border-b border-white/10 anim-fade-in-up shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+        
+        <!-- Left Spacer to maintain flex layout -->
+        <div class="hidden md:block w-1/4"></div>
+
+        <!-- Center Text Logo & Badge -->
+        <div class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 cursor-pointer group">
+            <h2 class="text-3xl md:text-4xl font-bold text-white tracking-wide group-hover:scale-105 active:scale-95 transition-all duration-200 ease-out drop-shadow-[0_4px_15px_rgba(255,255,255,0.3)]">
+                Shivam Madaan
+            </h2>
+            <img src="assets/badge.png" alt="" class="w-6 h-6 md:w-7 md:h-7 group-hover:rotate-90 transition-transform duration-200 ease-out">
+        </div>
+
+        <!-- Right Navigation Links -->
+        <nav class="hidden md:flex justify-end items-center gap-8 font-medium text-[1.1rem]">
+            <a href="#home" class="bg-white text-black px-7 py-2 rounded-full hover:scale-105 active:scale-95 transition-all duration-200 ease-out shadow-[0_0_15px_rgba(255,255,255,0.2)]">Home</a>
+        </nav>
+
+        <!-- Mobile Menu Hamburger Icon -->
+        <button class="md:hidden text-white ml-auto">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </header>
+
+    <div id="home" class="w-full max-w-5xl flex flex-col mt-28 md:mt-16 z-10">
+        
+        <!-- Main Card Container with Tilt Effect -->
+        <div class="tilt-card bg-white/10 backdrop-blur-2xl border border-white/20 text-white rounded-[2rem] p-8 md:p-12 shadow-[0_8px_32px_0_rgba(255,255,255,0.05)] w-full flex flex-col gap-8 md:gap-12 anim-fade-in-up" style="animation: fadeInUp 700ms cubic-bezier(0.22, 1, 0.36, 1) both, pulseGlow 8s ease-in-out 700ms infinite alternate;">
+            
+            <!-- Columns Wrapper -->
+            <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center md:items-start w-full">
+                
+                <!-- Left Column: Profile Info & Image -->
+                <div class="flex flex-col items-center w-full md:w-5/12 scroll-hidden observer-target" style="transition-delay: 100ms;">
+                <!-- Profile Image -->
+                <div class="relative group cursor-pointer mb-8" onclick="openModal('assets/profile.png')">
+                    <div class="absolute inset-0 bg-white/10 rounded-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-200 ease-out transform scale-105 z-10"></div>
+                    <img 
+                        src="assets/profile.png" 
+                        alt="Shivam Madaan" 
+                        class="w-64 h-64 md:w-72 md:h-72 object-cover squircle shadow-lg transition-transform duration-200 ease-out group-hover:scale-[1.02] group-active:scale-[0.98] relative z-0"
+                        onerror="this.src='https://placehold.co/400x400/cccccc/000000?text=Image+Not+Found'"
+                    >
+                    
+                    <!-- Expand Icon Indicator -->
+                    <div class="absolute bottom-5 right-5 bg-black/50 backdrop-blur-md border border-white/20 text-white p-2.5 rounded-full opacity-70 group-hover:opacity-100 group-hover:scale-110 group-active:scale-95 transition-all duration-200 ease-out shadow-[0_4px_15px_rgba(0,0,0,0.5)] z-20 pointer-events-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" />
+                        </svg>
+                    </div>
+                </div>
+
+                <h2 class="text-xl font-medium tracking-tight mb-6 text-center text-gray-300">
+                    Guitarist, Music Producer, Composer Songwriter, Singer
+                </h2>
+                
+                <!-- Social Media Icons (Images instead of FontAwesome) -->
+                <div class="flex gap-5 justify-center w-full items-center">
+                    <a href="https://instagram.com/Shivam_madaann" target="_blank" class="floating-element" style="animation-delay: 0s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Instagram_logo_2022.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Instagram" class="w-10 h-10 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                    <a href="https://www.tiktok.com/@shivam.madaann" target="_blank" class="floating-element" style="animation-delay: 0.1s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Tiktok_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="TikTok" class="w-9 h-9 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                    <a href="https://www.facebook.com/shivammadaannn" target="_blank" class="floating-element" style="animation-delay: 0.2s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Facebook" class="w-10 h-10 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                    <a href="https://www.youtube.com/@Shivam.Madaann" target="_blank" class="floating-element" style="animation-delay: 0.3s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/52/YouTube_social_white_circle_%282017%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="YouTube" class="w-11 h-11 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                    <a href="https://share.google/O4G0QNn0MebSMJgMG" target="_blank" rel="noopener noreferrer" class="floating-element" style="animation-delay: 0.4s;">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Google_Favicon_2025.svg?utm_source=commons.wikimedia.org&amp;utm_campaign=index&amp;utm_content=original" alt="Google Knowledge Panel" class="w-9 h-9 hover:scale-110 active:scale-95 hover:-translate-y-1 transition-all duration-200 ease-out drop-shadow-md cursor-pointer">
+                    </a>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="mt-6 text-center text-[1.05rem] font-medium tracking-tight leading-snug text-gray-300 scroll-hidden observer-target" style="transition-delay: 300ms;">
+                    <p class="mb-1 hover:text-white transition-colors cursor-default">Email: official@shivammadaan.com</p>
+                    <p class="hover:text-white transition-colors cursor-default">Phone: +1 (249) 378-4072</p>
+                </div>
+            </div>
+
+            <!-- Right Column: Links & Contact Info -->
+            <div class="flex flex-col w-full md:w-7/12 justify-center pt-2">
+                
+                <!-- Link Buttons container -->
+                <div id="profile-links" class="flex flex-col gap-5 w-full mb-8">
+                    
+                    <!-- Spotify Button -->
+                    <a href="https://open.spotify.com/artist/49EQh2zGjwjO1vQxhXQbwg" target="_blank" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden observer-target text-white" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Spotify_2.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Spotify" class="w-9 h-9 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">Spotify</span>
+                    </a>
+
+                    <!-- Apple Music Button -->
+                    <a href="https://music.apple.com/us/artist/shivam-madaan/1819794229" target="_blank" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden observer-target text-white" style="transition-delay: 150ms;">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Apple_Music_Logo.png?utm_source=commons.wikimedia.org&amp;utm_campaign=index&amp;utm_content=original" alt="Apple Music" class="w-9 h-9 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">Apple Music</span>
+                    </a>
+
+                    <!-- Official Website Button -->
+                    <a href="https://shivammadaan.com/" target="_blank" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden observer-target text-white" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google_Chrome_icon_%28February_2022%29.svg?utm_source=commons.wikimedia.org&amp;utm_campaign=index&amp;utm_content=original" alt="Official Website" class="w-9 h-9 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">Official Website</span>
+                    </a>
+
+                    <!-- Snapchat Button -->
+                    <a href="https://www.snapchat.com/add/Shivam_madaann" target="_blank" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden observer-target text-white" style="transition-delay: 250ms;">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Snapchat-logo-svgrepo-com.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Snapchat" class="w-9 h-9 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">Snapchat</span>
+                    </a>
+
+                    <!-- WhatsApp Button -->
+                    <a href="https://whatsapp.com/channel/0029Vb8teTy4IBhF0T22Tw0V" target="_blank" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden observer-target text-white" style="transition-delay: 300ms;">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/2062095_application_chat_communication_logo_whatsapp_icon.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="WhatsApp" class="w-9 h-9 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">WhatsApp</span>
+                    </a>
+
+                    <!-- Email Button -->
+                    <a href="mailto:official@shivammadaan.com" class="group relative flex items-center p-2 w-full border-2 border-white/40 rounded-full overflow-hidden transition-all duration-200 ease-out hover:scale-[1.02] active:scale-[0.98] hover:shadow-[0_0_15px_rgba(255,255,255,0.2)] bg-transparent hover:bg-white hover:text-black hover:border-transparent scroll-hidden observer-target text-white" style="transition-delay: 350ms;">
+                        <div class="w-12 h-12 flex items-center justify-center shrink-0">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Gmail_icon_%282026%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Email" class="w-8 h-8 group-hover:scale-110 transition-transform duration-200 ease-out">
+                        </div>
+                        <span class="flex-1 text-center text-[1.1rem] font-semibold tracking-tight pr-12">Email</span>
+                    </a>
+
+                </div>
+
+            </div>
+            
+            </div> <!-- End Columns Wrapper -->
+        </div> <!-- End Main Card Container -->
+
+    </div> <!-- End Max-w-5xl Container -->
+
+    <!-- Footer Section -->
+    <footer class="text-white text-center mt-12 text-sm font-medium tracking-wide leading-relaxed pb-6 anim-fade-in-up" style="animation-delay: 300ms;">
+        <p class="opacity-80 hover:opacity-100 transition-opacity cursor-default">© 2026 Shivam Madaan</p>
+        <p class="opacity-80 hover:opacity-100 transition-opacity cursor-default">All Rights Reserved.</p>
+    </footer>
+
+    <!-- Fullscreen Image Modal -->
+    <div id="image-modal" class="fixed inset-0 z-[100] hidden bg-black/90 backdrop-blur-md flex justify-center items-center opacity-0 transition-opacity duration-200 ease-out cursor-pointer">
+        <span class="absolute top-6 right-8 text-white text-4xl font-bold hover:text-gray-300 transition-colors">&times;</span>
+        <img id="modal-img" src="" alt="Fullscreen Preview" class="max-w-[90%] max-h-[90vh] object-contain rounded-2xl scale-95 transition-transform duration-200 ease-out">
+    </div>
+    
+    <!-- Correctly linking the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
